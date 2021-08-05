@@ -1,3 +1,7 @@
+import { Governors } from "./governors.js"
+
+
+
 export const saturn = () => {
     return `
         <article>
@@ -32,7 +36,10 @@ export const saturn = () => {
         </article>
 
         <article>
-        <section>governer choice will go here</section>
+       
+        <label for="cars">Choose a governor:</label>
+        ${Governors()}
+
         </article>
 
         <article>
