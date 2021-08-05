@@ -94,18 +94,23 @@ const database = {
 
     facilityMinerals: [
         {
-            id: ,
-            mineralId: ,
-            facilityId: ,
-            mineralQuantity: ,
+            id: 1,
+            mineralId: 1,
+            facilityId:1 ,
+            mineralQuantity:5 ,
         }
     ],
 
     chosenMinerals: [
         {
-            id: ,
-            mineralId: ,
-            colonyId: 
+            id:1 ,
+            mineralId: 1,
+            colonyId: 1
         }
     ]
+}
+
+
+export const getGovernors = () => {
+    return database.governors.map(governor => ({ ...governor }))
 }
