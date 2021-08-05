@@ -1,25 +1,26 @@
+import { facilityList } from "./facilityList.js";
 import { Governors } from "./governors.js"
 
 
+document.addEventListener(
+    "change",
+    (event) => {
+        let button = document.querySelector(".button");
+        if (event.target.name === "governor" && event.target.value !== "0" ) {
+            button.disabled = true; 
+        }else{
+            button.disabled = false;
+        }
+    }
+)
 
 export const saturn = () => {
     return `
-        <article>
-        <section>
-        <h2>Facility</h2>
-        </section>
+        
+        <article class="facilityOption">
+        <h2>Active Mining Facility</h2>
+        <section class="facilityList"> ${facilityList()}</section>
 
-        <section>
-        <h2>Facility</h2>
-        </section>
-
-        <section>
-        <h2>Facility</h2>
-        </section>
-
-        <section>
-        <h2>Facility</h2>
-        </section>
 
         </article>
 
