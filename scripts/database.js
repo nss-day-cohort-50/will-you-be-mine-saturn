@@ -107,7 +107,10 @@ const database = {
             mineralId: 1,
             colonyId: 1
         }
-    ]
+    ],
+    transientGovernor:{
+
+    }
 }
 
 
@@ -117,4 +120,8 @@ export const getGovernors = () => {
 
 export const getFacilities = () => {
     return database.facility.map(list => ({...list}))
+}
+
+export const setGovernors = (id) => {
+    database.transientGovernor.facilityId = id
 }
