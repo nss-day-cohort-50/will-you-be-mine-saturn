@@ -114,3 +114,7 @@ const database = {
 export const getGovernors = () => {
     return database.governors.map(governor => ({ ...governor }))
 }
+
+export const getFacilities = () => {
+    return database.facility.map(list => ({...list}))
+}
