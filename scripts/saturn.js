@@ -1,5 +1,5 @@
 import { facilityList } from "./facilityList.js";
-import { governorList } from "./governors.js"
+import { Governors } from "./governors.js"
 
 
 export const saturn = () => {
@@ -15,17 +15,17 @@ export const saturn = () => {
 
             <section class="options__governor list options">
                 <h2>Governor List</h2>
-                ${governorList()}
+                ${Governors()}
             </section>
 
             <section class="options__mineral list options">
                 <h2>Mineral List</h2>
-               
+                
             </section>
 
             <section class="options__colony list options">
                 <h2>Colony List</h2>
-                
+               
             </section>
     `
 }
