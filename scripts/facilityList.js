@@ -1,19 +1,42 @@
-import { getFacilities } from "./database.js"
+import { getFacilities, getTransientState } from "./database.js"
 
+const transientState = getTransientState()
 const facilities = getFacilities()
 
-export const facilityList = () => {
-    let html = "<ul>"
 
-    // Use .map() for converting objects to <li> elements
-    const listItems = facilities.map(facility => {
-        return `<li>
-            <button class="button">${facility.name}</button>
-        </li>`
-    })
 
-    html += listItems.join("")
-    html += "</ul>"
 
-    return html
-}
+document.addEventListener("DOMContentLoaded", (event) => {
+    let buttons = document.querySelectorAll('.button');
+    console.log(buttons)
+    for (const button of buttons) {
+        // buttons.disabled = true
+        if (transientState > 0) {
+            button.disabled = true
+        } else {
+            button.disabled = true
+        }
+    }
+   
+
+      });
+  
+
+    export const facilityList = () => {
+
+        let html = "<section>"
+
+
+
+        const listItems = facilities.map(facility => {
+            return `
+            <button name="facility" class="button" disabled>${facility.name}</button>
+        `
+        }
+        )
+
+        html += listItems.join("")
+        html += "</section>"
+
+        return html
+    }

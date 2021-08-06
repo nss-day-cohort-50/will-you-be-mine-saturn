@@ -1,18 +1,18 @@
 import { facilityList } from "./facilityList.js";
 import { Governors } from "./governors.js"
 
+// document.addEventListener(
+//     "change",
+//     (event) => {
+//         let button = document.querySelector(".button");
+//         if (event.target.name === "governor" && event.target.value !== "0" ) {
+//             button.disabled = true; 
+//         }else{
+//             button.disabled = false;
+//         }
+//     }
+// )
 
-document.addEventListener(
-    "change",
-    (event) => {
-        let button = document.querySelector(".button");
-        if (event.target.name === "governor" && event.target.value !== "0" ) {
-            button.disabled = true; 
-        }else{
-            button.disabled = false;
-        }
-    }
-)
 
 export const saturn = () => {
     return `
@@ -37,9 +37,10 @@ export const saturn = () => {
         </article>
 
         <article>
-       
-        <label for="cars">Choose a governor:</label>
+        <section class="governor">
+        <label for="governor">Choose a governor:</label>
         ${Governors()}
+        </section>
 
         </article>
 
