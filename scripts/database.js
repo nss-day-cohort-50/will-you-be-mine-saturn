@@ -108,7 +108,9 @@ const database = {
             colonyId: 1
         }
     ],
-    transientGovernor:{
+    transientState:{
+        governorId: 0,
+        colonyId: 0,
 
     }
 }
@@ -123,5 +125,8 @@ export const getFacilities = () => {
 }
 
 export const setGovernors = (id) => {
-    database.transientGovernor.facilityId = id
+    database.transientState.governorId = id
+}
+export const getTransientState = () =>{
+    return database.transientState.governorId
 }

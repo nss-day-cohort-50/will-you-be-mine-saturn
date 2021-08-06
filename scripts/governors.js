@@ -1,25 +1,20 @@
-import { getGovernors } from "./database.js";
+import { getGovernors,setGovernors } from "./database.js";
 
 const governors = getGovernors();
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "governor" && event.target.value !== "0" ) {
-                        button.disabled = true; 
-                    }else{
-                        button.disabled = false;
-                    }
-
-         setTransientObject(parseInt(event.target.value))
-
+        if (event.target.name === 'governor' && event.target.value !== "0" ) {
+            setGovernors(parseInt(event.target.value))
         }
-
+    }
 )
+ 
 
-
+       
 export const Governors = () => {
     let html = "<select>"
-    html +=  "<option class='input' value='0'>select a governor</option>"
+    html +=  "<option class='input' name='governor' value='0'>select a governor</option>"
       
     // Use .map() for converting objects to <li> elements
     const listItems = governors.map(governor => {
