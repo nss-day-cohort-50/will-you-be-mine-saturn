@@ -18,14 +18,7 @@ export const saturn = () => {
                 ${Governors()}
             </section>
 
-            <section class="options__mineral list options">
-                <h2>Mineral List</h2>
-                
             </section>
-
-            <section class="options__colony list options">
-                <h2>Colony List</h2>
-               
-            </section>
+        </article>
     `
 }
