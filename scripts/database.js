@@ -50,7 +50,7 @@ const database = {
             name: "salt n' peppa"
         }
     ],
-    facility: [
+    facilities: [
         {
             id: 1,
             name: "The Hot Spot",
@@ -108,11 +108,6 @@ const database = {
             colonyId: 1
         }
     ],
-    transientState:{
-        governorId: 0,
-        colonyId: 0,
-
-    }
 }
 
 
@@ -121,12 +116,13 @@ export const getGovernors = () => {
 }
 
 export const getFacilities = () => {
-    return database.facility.map(list => ({...list}))
+    return database.facilities.map(list => ({...list}))
 }
 
-export const setGovernors = (id) => {
-    database.transientState.governorId = id
+export const getMinerals = () => {
+    return database.minerals.map(mineral => ({... mineral}))
 }
-export const getTransientState = () =>{
-    return database.transientState.governorId
+
+export const getColonies = () => {
+    return database.colonies.map(colony => ({... colony}))
 }

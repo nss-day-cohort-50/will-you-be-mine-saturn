@@ -1,17 +1,14 @@
-import { getFacilities, getTransientState } from "./database.js"
+import { getFacilities } from "./database.js"
 
-const transientState = getTransientState()
 const facilities = getFacilities()
 
 
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    let buttons = document.querySelectorAll('.button');
-    console.log(buttons)
+    let buttons = document.querySelectorAll('.button')
     for (const button of buttons) {
-        // buttons.disabled = true
-        if (transientState > 0) {
+        if ( governor.id > 0) {
             button.disabled = true
         } else {
             button.disabled = true

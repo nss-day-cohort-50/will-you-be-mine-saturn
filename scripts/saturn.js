@@ -1,55 +1,32 @@
 import { facilityList } from "./facilityList.js";
-import { Governors } from "./governors.js"
-
-// document.addEventListener(
-//     "change",
-//     (event) => {
-//         let button = document.querySelector(".button");
-//         if (event.target.name === "governor" && event.target.value !== "0" ) {
-//             button.disabled = true; 
-//         }else{
-//             button.disabled = false;
-//         }
-//     }
-// )
-
+import { governorList } from "./governors.js"
+import { mineralList } from "./minerals.js"
+import { colonyList } from "./colonies.js";
 
 export const saturn = () => {
+    
     return `
-        
-        <article class="facilityOption">
-        <h2>Active Mining Facility</h2>
-        <section class="facilityList"> ${facilityList()}</section>
+        <h1>Will You Be Mine Saturn</h1>
+    
+        <article class="choices">
+            <section class="options__facility list options">
+                <h2>Facility List</h2>
+                ${facilityList()}
+            </section>
 
+            <section class="options__governor list options">
+                <h2>Governor List</h2>
+                ${governorList()}
+            </section>
 
-        </article>
+            <section class="options__mineral list options">
+                <h2>Mineral List</h2>
+                ${mineralList()}
+            </section>
 
-        <article>
-
-        <section>
-        <h2>Chosen Minerals</h2>
-        </section>
-
-        </article>
-
-        <article>
-        <button id="orderButton">Choose All Minerals</button>
-        </article>
-
-        <article>
-        <section class="governor">
-        <label for="governor">Choose a governor:</label>
-        ${Governors()}
-        </section>
-
-        </article>
-
-        <article>
-        <section>
-        <h2>Available Resources for colony</h2>
-        </section
-        </article>
-
-       
+            <section class="options__colony list options">
+                <h2>Colony List</h2>
+                ${colonyList()}
+            </section>
     `
 }
