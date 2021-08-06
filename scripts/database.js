@@ -108,6 +108,12 @@ const database = {
             colonyId: 1
         }
     ],
+
+    transientState:{
+     governorId:0
+
+    }
+
 }
 
 
@@ -119,10 +125,9 @@ export const getFacilities = () => {
     return database.facilities.map(list => ({...list}))
 }
 
-export const getMinerals = () => {
-    return database.minerals.map(mineral => ({... mineral}))
-}
 
-export const getColonies = () => {
-    return database.colonies.map(colony => ({... colony}))
-}
+export const setGovernor = (id) => {
+    database.transientState.governorId = id
+    document.dispatchEvent(new CustomEvent("stateChanged"))
+
+
