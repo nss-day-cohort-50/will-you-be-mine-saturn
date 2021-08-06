@@ -1,4 +1,4 @@
- bd-facilityButtonDisable
+
 import { getGovernors,setGovernor } from "./database.js";
 
 
