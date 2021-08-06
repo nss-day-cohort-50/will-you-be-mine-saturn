@@ -1,4 +1,6 @@
+ bd-facilityButtonDisable
 import { getGovernors,setGovernor } from "./database.js";
+
 
 const governors = getGovernors();
 document.addEventListener(
@@ -15,8 +17,11 @@ document.addEventListener(
  
 
        
+
 export const Governors = () => {
     let html = "<select name='governor'>"
+
+
     html +=  "<option class='input' name='governor' value='0'>select a governor</option>"
       
     // Use .map() for converting objects to <li> elements

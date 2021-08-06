@@ -50,7 +50,7 @@ const database = {
             name: "salt n' peppa"
         }
     ],
-    facility: [
+    facilities: [
         {
             id: 1,
             name: "The Hot Spot",
@@ -108,10 +108,12 @@ const database = {
             colonyId: 1
         }
     ],
+
     transientState:{
      governorId:0
 
     }
+
 }
 
 
@@ -120,13 +122,12 @@ export const getGovernors = () => {
 }
 
 export const getFacilities = () => {
-    return database.facility.map(list => ({...list}))
+    return database.facilities.map(list => ({...list}))
 }
+
 
 export const setGovernor = (id) => {
     database.transientState.governorId = id
     document.dispatchEvent(new CustomEvent("stateChanged"))
-}
-export const getTransientState = () =>{
-    return database.transientState.governorId
-}
+
+
