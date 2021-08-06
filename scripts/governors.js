@@ -1,4 +1,4 @@
-import { getGovernors,setGovernors } from "./database.js";
+import { getGovernors } from "./database.js";
 
 const governors = getGovernors();
 document.addEventListener(
@@ -12,7 +12,7 @@ document.addEventListener(
  
 
        
-export const Governors = () => {
+export const governorList = () => {
     let html = "<select>"
     html +=  "<option class='input' name='governor' value='0'>select a governor</option>"
       
