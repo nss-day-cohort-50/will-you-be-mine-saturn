@@ -123,8 +123,9 @@ export const getFacilities = () => {
     return database.facility.map(list => ({...list}))
 }
 
-export const setGovernors = (id) => {
+export const setGovernor = (id) => {
     database.transientState.governorId = id
+    document.dispatchEvent(new CustomEvent("stateChanged"))
 }
 export const getTransientState = () =>{
     return database.transientState.governorId

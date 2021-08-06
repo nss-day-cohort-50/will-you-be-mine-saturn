@@ -1,4 +1,4 @@
-import { getGovernors,setGovernors } from "./database.js";
+import { getGovernors,setGovernor } from "./database.js";
 
 const governors = getGovernors();
 document.addEventListener(
@@ -8,7 +8,7 @@ document.addEventListener(
 
         console.log(event)
         if (event.target.name === 'governor' ) {
-            setGovernors(parseInt(event.target.value))
+            setGovernor(parseInt(event.target.value))
         }
     }
 )
