@@ -130,4 +130,4 @@ export const setGovernor = (id) => {
     database.transientState.governorId = id
     document.dispatchEvent(new CustomEvent("stateChanged"))
 
-
+}
