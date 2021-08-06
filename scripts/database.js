@@ -109,8 +109,7 @@ const database = {
         }
     ],
     transientState:{
-        governorId: 0,
-        colonyId: 0,
+     governorId:0
 
     }
 }

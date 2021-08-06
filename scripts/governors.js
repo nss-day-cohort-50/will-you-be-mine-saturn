@@ -4,7 +4,10 @@ const governors = getGovernors();
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === 'governor' && event.target.value !== "0" ) {
+
+
+        console.log(event)
+        if (event.target.name === 'governor' ) {
             setGovernors(parseInt(event.target.value))
         }
     }
@@ -13,7 +16,7 @@ document.addEventListener(
 
        
 export const Governors = () => {
-    let html = "<select>"
+    let html = "<select name='governor'>"
     html +=  "<option class='input' name='governor' value='0'>select a governor</option>"
       
     // Use .map() for converting objects to <li> elements
