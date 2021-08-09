@@ -8,8 +8,9 @@ export const saturn = () => {
         <h1>Will You Be Mine Saturn</h1>
     
         <article class="choices">
+        <h2>Facility List</h2>
             <section class="options__facility list options">
-                <h2>Facility List</h2>
+                
                 ${facilityList()}
             </section>
 
@@ -27,5 +28,6 @@ export const saturn = () => {
                 <h2>Colony List</h2>
                
             </section>
+            </article>
     `
 }
