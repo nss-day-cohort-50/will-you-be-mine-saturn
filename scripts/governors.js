@@ -22,6 +22,7 @@ export const Governors = () => {
     let html = "<select name='governor'>"
 
 
+
     html +=  "<option class='input' name='governor' value='0'>select a governor</option>"
       
     const listItems = governors.map(governor => {
