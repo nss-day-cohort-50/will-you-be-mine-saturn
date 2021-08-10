@@ -100,6 +100,32 @@ const database = {
             mineralQuantity:5 ,
         }
     ],
+    purchasedMinerals: [
+        {
+        id:1,
+        colonyId:1,
+        mineralId:1,
+        amount: 1
+    },
+        {
+        id:2,
+        colonyId:2,
+        mineralId:2,
+        amount: 6
+    },
+        {
+        id:3,
+        colonyId:3,
+        mineralId:3,
+        amount: 4
+    },
+        {
+        id:4,
+        colonyId:4,
+        mineralId:3,
+        amount: 6
+    },
+    ],
 
     chosenMinerals: [
         {
@@ -125,6 +151,16 @@ export const getFacilities = () => {
     return database.facilities.map(list => ({...list}))
 }
 
+export const getMinerals = () => {
+    return database.minerals.map(mineral => ({...mineral}))
+}
+
+export const getColonies = () => {
+    return database.colonies.map(colony => ({...colony}))
+}
+export const getPurchasedMinerals = () => {
+    return database.purchasedMinerals.map(purchasedMineral =>({...purchasedMineral}))
+}
 
 export const setGovernor = (id) => {
     database.transientState.governorId = id
@@ -133,5 +169,5 @@ export const setGovernor = (id) => {
 }
 
 export const getTransientState = ()=> {
-    return database.transientState.governorId
+    return database.transientState
 }
