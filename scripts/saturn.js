@@ -1,5 +1,6 @@
 import { facilityList } from "./facilityList.js";
 import { Governors } from "./governors.js"
+import { ColonyMinerals} from "./colonies.js"
 
 
 export const saturn = () => {
@@ -26,7 +27,7 @@ export const saturn = () => {
 
             <section class="options__colony list options">
                 <h2>Colony List</h2>
-               
+               ${ColonyMinerals()}
             </section>
             </article>
     `

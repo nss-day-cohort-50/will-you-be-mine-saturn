@@ -16,7 +16,7 @@ const facilities = getFacilities()
 
         const listItems = facilities.map(facility => {
             return `
-            <button ${transientState > 0 ? "" : "disabled"} class="facility__selector"
+            <button ${transientState.governorId > 0 ? "" : "disabled"} class="facility__selector"
             id="facility--${facility.id}">${facility.name}</button>
         `
         }
