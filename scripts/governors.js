@@ -1,7 +1,7 @@
 
-import { getGovernors,setGovernor } from "./database.js";
+import { getGovernors,setGovernor,getTransientState } from "./database.js";
 
-
+const transientState = getTransientState()
 const governors = getGovernors();
 document.addEventListener(
     "change",
@@ -26,10 +26,11 @@ export const Governors = () => {
       
     // Use .map() for converting objects to <li> elements
     const listItems = governors.map(governor => {
+        
         return `
 
         
-          <option class="input" name="governor" value="${governor.id}">${governor.name}</option>
+          <option ${transientState.governorId === governor.id ? "selected" : ""} class="input" name="governor" value="${governor.id}">${governor.name}</option>
        
         `
     }
